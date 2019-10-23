@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+{% include 'flash.html' %}
+
+<h1>{{ info }}</h1>
+
+{% for mess in data.messages %}
+    <div class="message">
+        <h2>{{ mess[0] }}</h2>
+        <p>{{ mess[1] }}</p>
+        <i>Author: {{ mess[2] }}</i>
+    </div>
+{% endfor %}
+
+<a href="/">Go back</a>
+
+{% include 'footer.html' %}

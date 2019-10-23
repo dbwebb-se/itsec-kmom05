@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+{% include 'flash.html' %}
+
+<h1>{{ data.info }}</h1>
+
+<form method="POST" action="/process">
+    Header: <input type="text" name="header">
+    Body: <input type="text" name="body">
+    Author: <input type="text" name="author">
+
+    <input type="submit" value="Add message">
+</form>
+
+{% include 'footer.html' %}
