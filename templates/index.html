@@ -4,9 +4,14 @@
 <h1>{{ data.info }}</h1>
 
 <form method="POST" action="/process">
-    Header: <input type="text" name="header">
-    Body: <input type="text" name="body">
-    Author: <input type="text" name="author">
+    <label for="header">Header</label>
+    <input type="text" name="header" id="header">
+
+    <label for="body">Body</label>
+    <textarea name="body" id="body" style="height:200px"></textarea>
+
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author">
 
     <input type="submit" value="Add message">
 </form>
