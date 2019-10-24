@@ -1,13 +1,13 @@
 {% include 'header.html' %}
 {% include 'flash.html' %}
 
-<h1>{{ data.info }}</h1>
+<h1>{{ data.info | safe }}</h1>
 
 {% for mess in data.messages %}
     <div class="message">
-        <h2>{{ mess[0] }}</h2>
-        <p>{{ mess[1] }}</p>
-        <i>Author: {{ mess[2] }}</i>
+        <h2>{{ mess[0] | safe }}</h2>
+        <p>{{ mess[1] | safe }}</p>
+        <i>Author: {{ mess[2] | safe }}</i>
     </div>
 {% endfor %}
 

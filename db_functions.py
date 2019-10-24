@@ -13,9 +13,9 @@ def recreate_db():
     cur.execute("DROP TABLE messages")
     cur.execute("CREATE TABLE messages (header TEXT, body TEXT, author TEXT);")
     conn.commit()
-    cur.execute("INSERT INTO messages VALUES('Breaking news!', 'One plus one equals two', 'Andreas');")
-    cur.execute("INSERT INTO messages VALUES('Summer news', 'The sun can be pretty warm', 'Emil');")
-    cur.execute("INSERT INTO messages VALUES('WANTED!', 'Someone that likes php...', 'Mikael');")
+    cur.execute("INSERT INTO messages VALUES('Breaking news!', 'In Python, everything is done by reference. It doesn’t support pointers.', 'Andreas');")
+    cur.execute("INSERT INTO messages VALUES('Danske nyheder', 'Jorden er rund ... vi troede altid, at den var flad.', 'Emil');")
+    cur.execute("INSERT INTO messages VALUES('WANTED!', 'Someone else that likes php...', 'Mikael');")
     conn.commit()
     conn.close()
 

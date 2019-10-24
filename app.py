@@ -25,7 +25,6 @@ def recreate_db():
 @app.route('/process', methods=["POST"])
 def process_form():
     input_data = request.form;
-    # print(request.form)
     db_functions.add_to_database(input_data)
     flash("Added data")
     return redirect("/result", code=302);
@@ -38,8 +37,6 @@ def result_page():
         "messages": db_functions.get_all_from_database()
     }
 
-    # print(data)
-    # db_data = db_functions.get_all_from_database()
     return render_template("result.html", data=data);
 
 if __name__ == '__main__':
